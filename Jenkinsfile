@@ -1,7 +1,7 @@
 node {
     checkout scm
     stage('build') {
-        /* Test docker compose */
+        /* Test docker  compose */
             sh "docker-compose build"
             sh "docker-compose up"
     }
