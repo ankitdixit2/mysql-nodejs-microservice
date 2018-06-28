@@ -3,10 +3,10 @@ node {
     stage('build') {
         /* Test docker  compose */
             sh "docker-compose build"
-           /* sh "docker tag dockermicroservive_db ankurdixit82/dockermicroservive_db:latest"
-            sh "docker tag dockermicroservive_users-service ankurdixit82/dockermicroservive_users-service:latest"
-            sh "docker push dockermicroservive_db"    
-            sh "docker push dockermicroservive_users-service" */
+            sh "docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
+            sh "docker tag mysqlnodejsmicroservice_users-service ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
+            sh "docker push mysqlnodejsmicroservice_db:latest"    
+            sh "docker push mysqlnodejsmicroservice_users-service:latest"
             
     }
 }
