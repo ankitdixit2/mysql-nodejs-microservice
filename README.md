@@ -1,0 +1,47 @@
+# mysql-nodejs-microservice
+<<<<<<< HEAD
+
+Build a microservice using Node.js and Docker with a MySQL backend!
+
+**Prerequisites**
+Docker [Install Docker](https://docs.docker.com/engine/installation/)
+Docker Compose [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+
+**Instructions**
+To build the project, navigate in terminal to the folder with docker-compose.yml file.
+<<<<<<< HEAD
+	
+    Once there, type the following command-
+    
+    > docker-compose build
+    > docker-compose up
+    
+=======
+
+    Once there, type the following command-
+
+    > docker-compose build
+    > docker-compose up
+
+>>>>>>> 0e06486260e8ab7db7f0422292b607fc27e140d8
+These commands will create two containers, one running test-database microservice (MySQL) and the other running users-service microservice (Node.js)
+
+You can view the database user using http://localhost:8123/users
+
+If you are using docker-machine, you may need to use the IP address of the docker machine.
+
+Find that using -
+<<<<<<< HEAD
+	> docker-machine ls
+=======
+        > docker-machine ls
+>>>>>>> 0e06486260e8ab7db7f0422292b607fc27e140d8
+
+Then, you can use that IP address of the docker-machine to see the database!
+Use https://ip-address-of-docker-machine:8123/users
+
+
+=======
+For devops docker push registry
+>>>>>>> 37af70a9d048080261bc4a1b0039bc3a8af175d3
