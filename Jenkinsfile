@@ -11,7 +11,7 @@ node {
     stage('build') {
         /* Test docker  compose */
             sh "docker-compose build"
-            sh "docker tagg mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
+            sh "docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
             sh "docker tag mysqlnodejsmicroservice_users-service ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
             sh "docker push ankurdixit82/mysqlnodejsmicroservice_db:latest"    
             sh "docker push ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
@@ -25,7 +25,5 @@ node {
     } catch (e) {
         currentBuild.result = 'FAILURE'
         throw e
-    }finally {
-        notifySlack(currentBuild.result)
     }
 }
