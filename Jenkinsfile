@@ -17,4 +17,13 @@ node {
             sh "docker push ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
             
     }
+     try {
+      
+        notifySlack(currentBuild.result)
+
+        // Existing build steps.
+    } catch (e) {
+        currentBuild.result = 'FAILURE'
+        throw e
+    }
 }
