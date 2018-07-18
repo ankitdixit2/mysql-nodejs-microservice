@@ -8,7 +8,7 @@ def notifySlack(String buildStatus = 'STARTED') {
 }
 node {
     checkout scm
-    notifySlack(currentBuild.result) {
+    stage('build') {
         /* Test docker  compose */
             sh "docker-compose build"
             sh "docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
