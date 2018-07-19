@@ -10,7 +10,7 @@ node {
     checkout scm
     stage('build') {
         /* Test docker  compose */
-            sh "sudo docker-compose build"
+            sh "docker-compose build"
             sh "sudo docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
             sh "sudo docker tag mysqlnodejsmicroservice_users-service ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
             sh "sudo docker push ankurdixit82/mysqlnodejsmicroservice_db:latest"    
