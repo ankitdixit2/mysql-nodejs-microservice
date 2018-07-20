@@ -1,4 +1,4 @@
-/* def notifySlack(String buildStatus = 'STARTED') {
+def notifySlack(String buildStatus = 'STARTED') {
     // Build status of null means success.
     buildStatus = buildStatus ?: 'SUCCESS'
     
@@ -10,14 +10,14 @@ node {
     checkout scm
     stage('build') {
         /* Test docker  compose  */
-            sh "docker-compose build"
-            sh "docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
-            sh "docker tag mysqlnodejsmicroservice_users-service ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
-            sh "docker push ankurdixit82/mysqlnodejsmicroservice_db:latest"    
-            sh "docker push ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
+        //    sh "docker-compose build"
+        //    sh "docker tag mysqlnodejsmicroservice_db ankurdixit82/mysqlnodejsmicroservice_db:latest"
+        //    sh "docker tag mysqlnodejsmicroservice_users-service ankurdixit82/mysqlnodejsmicroservice_users-service:latest"
+        //    sh "docker push ankurdixit82/mysqlnodejsmicroservice_db:latest"    
+        //    sh "docker push ankurdixit82/mysqlnodejsmicroservice_users-service:latest" 
             
-    }
-     try {
+    } 
+     try { 
       
         notifySlack(currentBuild.result)
 
@@ -26,4 +26,5 @@ node {
         currentBuild.result = 'FAILURE'
         throw e
     }
-} */
+} 
+
